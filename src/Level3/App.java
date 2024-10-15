@@ -1,28 +1,30 @@
-package Level2;
+package Level3;
+
+import Level2.Calculator;
 
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
+        ArithmeticCalculator<Double> calculator = new ArithmeticCalculator<Double>();
 
         Scanner sc = new Scanner(System.in);
 
         String exitCode = " ";
         while(!exitCode.equals("exit")){
             System.out.println("첫 번째 숫자를 입력하세요: ");
-            int firstNumber = sc.nextInt();
+            double firstNumber = sc.nextDouble();
             System.out.println("두 번째 숫자를 입력하세요: ");
-            int secondNumber = sc.nextInt();
-            System.out.println("사칙연산 기호를 입력하세요: ");
-            char operator = sc.next().charAt(0);
+            double secondNumber = sc.nextDouble();
+            System.out.println("사칙연산을 입력하세요(예:PLUS, MINUS, MULTIPLY, DIVIDE): ");
+            String operator = sc.next();
 
             calculator.setFirstNumber(firstNumber);
             calculator.setSecondNumber(secondNumber);
             calculator.setOperator(operator);
             calculator.calculate();
 
-            int result = calculator.getResult();
+            double result = calculator.getResult();
 
             System.out.println("결과: " + result);
 
