@@ -27,7 +27,12 @@ public class App {
             System.out.println("결과: " + result);
 
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
+            System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까? (remove 입력시 삭제)");
             exitCode = sc.next();
+            if (exitCode.equals("remove")){
+                calculator.removeResult();
+            }
+
         }
     }
 }

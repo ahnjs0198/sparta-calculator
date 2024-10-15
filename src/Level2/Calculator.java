@@ -1,7 +1,11 @@
 package Level2;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Calculator {
     private int result = 0;
+    private Queue<Integer> resultQueue = new LinkedList<>();
     private int firstNumber;
     private int secondNumber;
     private char operator;
@@ -25,6 +29,7 @@ public class Calculator {
                 }
                 break;
         }
+        resultQueue.add(result);
     }
 
     public int getResult() {
@@ -38,5 +43,9 @@ public class Calculator {
     }
     public void setOperator(char operator) {
         this.operator = operator;
+    }
+
+    public void removeResult() {
+        resultQueue.poll();
     }
 }
