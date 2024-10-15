@@ -24,7 +24,7 @@ public class App {
             calculator.setOperator(operator);
             calculator.calculate();
 
-            double result = calculator.getResult();
+            Number result = calculator.getResult();
 
             System.out.println("결과: " + result);
 

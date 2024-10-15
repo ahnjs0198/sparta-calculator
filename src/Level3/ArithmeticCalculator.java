@@ -33,7 +33,7 @@ public class ArithmeticCalculator<T extends Number> {
         resultQueue.add(result);
     }
 
-    public int getResult() {
+    public Number getResult() {
         return result;
     }
     public void setFirstNumber(T firstNumber) {
