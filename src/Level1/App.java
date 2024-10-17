@@ -5,12 +5,14 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        // 변수 선언
         int firstNumber;
         int secondNumber;
         char operator;
         String exitCode=" ";
 
         while(!exitCode.equals("exit")){
+            // 정수 2개와 연산자를 입력받는다
             System.out.println("첫 번째 숫자를 입력하세요: ");
             firstNumber = sc.nextInt();
             System.out.println("두 번째 숫자를 입력하세요: ");
@@ -18,6 +20,7 @@ public class App {
             System.out.println("사칙연산 기호를 입력하세요: ");
             operator = sc.next().charAt(0);
 
+            //연산자에 따라 사칙연산을 실행
             int result = 0;
             switch (operator) {
                 case '+':

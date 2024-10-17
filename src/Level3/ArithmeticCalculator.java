@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class ArithmeticCalculator<T extends Number> {
+    // 제네릭을 활용하여 int뿐만 아니라 double도 다룰수 있게 한다
     private Number result;
     private Queue<Number> resultQueue = new LinkedList<>();
     private Number firstNumber;
@@ -43,6 +44,7 @@ public class ArithmeticCalculator<T extends Number> {
         this.secondNumber = secondNumber;
     }
     public void setOperator(String operator) {
+        // String 타입으로 입력된 operator를 Enum 타입으로 변환
         this.operator = Enum.valueOf(OperatorType.class, operator);
     }
 

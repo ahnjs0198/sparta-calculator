@@ -10,6 +10,7 @@ public class Calculator {
     private int secondNumber;
     private char operator;
 
+    //사칙연산을 수행한다
     public void calculate() {
         switch (operator) {
             case '+':
@@ -32,6 +33,7 @@ public class Calculator {
         resultQueue.add(result);
     }
 
+    //getter와 setter 선언
     public int getResult() {
         return result;
     }
@@ -45,6 +47,7 @@ public class Calculator {
         this.operator = operator;
     }
 
+    //queue에서 가장 먼저 저장된 데이터를 삭제
     public void removeResult() {
         resultQueue.poll();
     }
