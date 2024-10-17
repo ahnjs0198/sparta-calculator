@@ -11,14 +11,18 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         String exitCode = " ";
+        String operator;
         while(!exitCode.equals("exit")){
             // 실수 2개와 연산자를 ENUM형식에 맞춰서 입력받는다
             System.out.println("첫 번째 숫자를 입력하세요: ");
             double firstNumber = sc.nextDouble();
             System.out.println("두 번째 숫자를 입력하세요: ");
             double secondNumber = sc.nextDouble();
-            System.out.println("사칙연산을 입력하세요(예:PLUS, MINUS, MULTIPLY, DIVIDE): ");
-            String operator = sc.next();
+            do {
+                System.out.println("사칙연산을 입력하세요(예:PLUS, MINUS, MULTIPLY, DIVIDE): ");
+                operator = sc.next();
+            } while (!operator.equals("PLUS") && !operator.equals("MINUS") && !operator.equals("MULTIPLY") && !operator.equals("DIVIDE"));
+
 
             // setter로 객체의 private한 필드에 변수를 저장한다
             calculator.setFirstNumber(firstNumber);
